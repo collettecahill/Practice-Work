@@ -27,7 +27,7 @@ else if (randomNumber == 7) {
   eightBall = 'Signs point to yes'}
   else {eightBall = 'Not valid'}
 
-/*switch (eightBall) {
+switch (eightBall) {
 case randomNumber = 0 : 'It is certain'
 break;
 case randomNumber = 1 : 'It is decidedly so'
@@ -44,15 +44,28 @@ case randomNumber = 6 : 'Outlook not so good'
 break;
 case randomNumber = 7 : 'Signs point to yes'
 break;
-}*/
+}
 
 console.log(`The Magic Eight Ball says '${eightBall}`)
 
-/*let raceNumber = Math.floor(Math.random() * 1000);
+let raceNumber = Math.floor(Math.random() * 1000);
 let regEarly = true
 let runnerAge = 18
 if (runnerAge > 18 && regEarly) {raceNumber += 1000}
 if (raceNumber > 1000)  {console.log(`You will start at 9:30 and your race number is ${raceNumber}`)}
 else if (runnerAge > 18 && !regEarly) {console.log(`You will start at 11:00 and your race number is ${raceNumber}`)}
 else if (runnerAge < 18) {console.log(`You will start at 12:30 and your race number is ${raceNumber}`)}
-else {console.log("Please see the registration desk")}*/
+else {console.log("Please see the registration desk")}
+
+ //function to generate all months in an Array
+const months = Array.from({length: 12}, (e, i) => {
+  return new Date(null, i + 1, null).toLocaleDateString("en", {month: "long"});
+})
+console.log(months)
+
+//function to return which Q of the year - month as an integer
+const quarterOf = (month) => {
+  
+  return Math.ceil(month / 3);}
+
+  console.log(quarterOf(11))
